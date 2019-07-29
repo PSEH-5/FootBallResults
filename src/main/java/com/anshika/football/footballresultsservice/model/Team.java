@@ -10,37 +10,7 @@ public class Team {
 
     private String team_key;
     private String team_name;
-    @JsonIgnore
-    private String team_badge;
-    @JsonIgnore
-    private List<Player> players;
 
-    @JsonIgnore
-    private List<Coach> coaches;
-
-    public String getTeam_badge() {
-        return team_badge;
-    }
-
-    public void setTeam_badge(String team_badge) {
-        this.team_badge = team_badge;
-    }
-
-    public List<Player> getPlayers() {
-        return players;
-    }
-
-    public void setPlayers(List<Player> players) {
-        this.players = players;
-    }
-
-    public List<Coach> getCoaches() {
-        return coaches;
-    }
-
-    public void setCoaches(List<Coach> coaches) {
-        this.coaches = coaches;
-    }
 
 
     public Team(){}

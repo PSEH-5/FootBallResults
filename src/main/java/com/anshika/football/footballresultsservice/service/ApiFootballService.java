@@ -32,7 +32,7 @@ public class ApiFootballService implements IFootballService {
 
     @Override
     public TeamStanding getResults(String country, String league, String team) {
-        TeamStanding teamRes = new TeamStanding();
+        TeamStanding teamRes ;
         String country_id , team_id ,league_id ;
 
 
@@ -49,7 +49,7 @@ public class ApiFootballService implements IFootballService {
     private String getCountry(String Country)
     {
 
-        if(Country.isEmpty())
+        if(Country == null)
             return null;
       String country_id=null;
         List<Country> result = null;
@@ -79,7 +79,7 @@ public class ApiFootballService implements IFootballService {
     {
 
 
-        if(CountryID.isEmpty() || League.isEmpty())
+        if(CountryID == null || League == null)
             return null;
 
         List<CountryLeague> result = null;
@@ -110,7 +110,7 @@ public class ApiFootballService implements IFootballService {
     {
 
 
-        if(Team.isEmpty() || LeagueID.isEmpty())
+        if(Team == null || LeagueID == null)
             return null;
         List<Team> result = null;
         String team_id=null;
@@ -137,7 +137,7 @@ public class ApiFootballService implements IFootballService {
     }
         private  TeamStanding getStanding(String leagueId,String teamId, String countryid) {
 
-            if(leagueId.isEmpty() || teamId.isEmpty() || countryid.isEmpty())
+            if(leagueId == null || teamId == null || countryid == null)
                 return null;
         TeamStanding teamStanding =null;
             List<TeamStanding> result = null;

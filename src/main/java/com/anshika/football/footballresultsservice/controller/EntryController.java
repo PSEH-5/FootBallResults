@@ -21,7 +21,12 @@ public class EntryController {
     {
         TeamStanding standing  = null;
         try {
-             standing = footballService.getResults(countryName, leagueName, teamName);
+            standing = footballService.getResults(countryName, leagueName, teamName);
+            if (null == standing) {
+                standing = new TeamStanding();
+                standing.setError("Results not found");
+            }
+
         }
         catch (Exception e)
         {

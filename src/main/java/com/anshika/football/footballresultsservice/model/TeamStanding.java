@@ -16,11 +16,12 @@ public class TeamStanding {
     private String team_name;
 
     private String overall_league_position;
+    private String error;
 
     public TeamStanding() {
     }
 
-    public TeamStanding(String country_name, String league_name, String country_id, String league_id, String team_id, String team_name, String overall_league_position) {
+    public TeamStanding(String country_name, String league_name, String country_id, String league_id, String team_id, String team_name, String overall_league_position, String error) {
         this.country_name = country_name;
         this.league_name = league_name;
         this.country_id = country_id;
@@ -28,7 +29,10 @@ public class TeamStanding {
         this.team_id = team_id;
         this.team_name = team_name;
         this.overall_league_position = overall_league_position;
+        this.error = error;
     }
+
+
 
     public String getCountry_name() {
         return country_name;
@@ -84,5 +88,13 @@ public class TeamStanding {
 
     public void setOverall_league_position(String overall_league_position) {
         this.overall_league_position = overall_league_position;
+    }
+
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
     }
 }
