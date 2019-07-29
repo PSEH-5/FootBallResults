@@ -10,14 +10,6 @@ public class CountryLeague {
     private String league_name;
     private String league_season;
 
-    public String getLeague_season() {
-        return league_season;
-    }
-
-    public void setLeague_season(String league_season) {
-        this.league_season = league_season;
-    }
-
 
 
     public CountryLeague()
@@ -65,4 +57,13 @@ public class CountryLeague {
     public void setLeague_name(String league_name) {
         this.league_name = league_name;
     }
+
+    public String getLeague_season() {
+        return league_season;
+    }
+
+    public void setLeague_season(String league_season) {
+        this.league_season = league_season;
+    }
+
 }
